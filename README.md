@@ -49,6 +49,10 @@ venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
 
+4. Create a .env file
+
+Paste your openai api key in  the env file.
+
 ### Running the API Server
 
 Start the FastAPI server using Uvicorn:
