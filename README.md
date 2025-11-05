@@ -22,12 +22,12 @@ This project is designed to process and understand unstructured documents, prepa
 ## Project Structure
 
 📂 project-root/
-├── app.py # Main application entry point
-├── main.py # Script to launch or test the app
-├── server.py # FastAPI server configuration
-├── utils.py # Helper functions for file handling and processing
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+1. app.py # Main application entry point
+2. main.py # Script to launch or test the app
+3. server.py # FastAPI server configuration
+4. utils.py # Helper functions for file handling and processing
+5. requirements.txt # Python dependencies
+6. README.md # Project documentation
 
 
 ---
@@ -49,9 +49,9 @@ venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
 
-Running the API Server
-Start the FastAPI server using Uvicorn:
+### Running the API Server
 
+Start the FastAPI server using Uvicorn:
 
 uvicorn server:app --reload
 
@@ -62,7 +62,8 @@ To view the interactive documentation, visit:
 
 http://127.0.0.1:8000/docs
 
-Design Decisions
+### Design Decisions
+
 FastAPI was chosen for its async capabilities and automatic OpenAPI documentation.
 
 LangChain and ChromaDB were used to handle embeddings and conversational retrieval efficiently.
@@ -81,24 +82,15 @@ main.py: Entry or orchestration script
 
 Extensibility First — Each module can be expanded independently (e.g., adding OCR, new parsers, or AI endpoints).
 
-Current Limitations & Future Work
-OCR Functionality: Currently disabled due to deployment complexity and dependency management.
+### Current Limitations & Future Work
+
+### OCR Functionality: Currently disabled due to deployment complexity and dependency management.
+
 We plan to integrate Tesseract OCR and Vision API support in future updates for full text extraction from scanned documents.
 
-File Type Handling: While robust, further optimization for multi-page document parsing is planned.
 
-LLM Integration: Future versions may include retrieval-augmented generation (RAG) pipelines for enhanced document reasoning.
+### Example Usage
 
-Tech Stack
-Category	Technologies
-Backend Framework	FastAPI, Starlette, Uvicorn
-AI/ML	PyTorch, Transformers, LangChain
-Vector Store	ChromaDB
-Document Parsing	Unstructured, PyPDF, PyMuPDF
-Environment	Python 3.10+
-Dev Tools	Typer, TQDM, Rich
-
-Example Usage
 Upload and Process a Document
 python
 Copy code
@@ -109,7 +101,7 @@ files = {"file": open("document.pdf", "rb")}
 response = requests.post(url, files=files)
 print(response.json())
 
-License
+### License
 
 This project is licensed under the MIT License — see the LICENSE
  file for details.
